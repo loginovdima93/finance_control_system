@@ -1,0 +1,30 @@
+.sidebar .user-info {
+    background: url("/images/savemoney.jpg") no-repeat no-repeat; 
+	background-size: cover;
+	height: 130px;}
+
+#leftsidebar {
+	width: 20%;
+}
+
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header {
+	background: #3F5195;
+}
+
+.dtp div.dtp-date, .dtp div.dtp-time {
+	background: #3F51B5
+}
+.dtp table.dtp-picker-days tr > td > a.selected{
+	background: #3F51B5;
+}
+
+.dtp .p10 > a {
+	color: #FFF;
+}
+
+.subBtn{
+	float: right;
+}
+
+.dataTables_wrapper .dt-buttons a.dt-button {
+	background-color: #3F51B5;}

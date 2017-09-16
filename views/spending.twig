@@ -1,0 +1,89 @@
+{% extends 'layout.twig' %}
+{% block title %}
+    <title>Мои расходы | Система учета финансов</title>
+{% endblock %}
+{% block content %}
+    <div class="row clearfix">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="header bg-indigo">
+                    <h2>Добавление расхода</h2>
+                </div>
+                <div class="body">
+                    <form id="form_validation_spending">
+                        <div class="form-group form-float">
+                            <select id="spending_acc" title="Выберите счет" type="select" name="accSel" required="" class="accountSelector">
+                                <option value="" disabled="" selected="">Выберите счет</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-float">
+                            <select id="spending_category" title="Выберите операцию" type="select" name="category" required="">
+                                <option value="" disabled="" selected="">Выберите категорию</option>
+                                <option>Еда</option>
+                                <option>Бытовые нужды</option>
+                                <option>Развлечения</option>
+                                <option>Транспорт</option>
+                                <option>Коммунальные платежи</option>
+                                <option>Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input id="spending_date" type="text" name="date" placeholder="Дата" required="" class="date form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input id="spending_sum" type="number" name="number" max="-0.001" required="" class="form-control"/>
+                                <label class="form-label" for="spending_sum">Сумма</label>
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input id="spending_comment" type="text" name="comment" class="form-control"/>
+                                <label class="form-label" for="spending_comment">Комментарий</label>
+                            </div>
+                        </div>
+                        <button id="new_spending" type="submit" class="btn bg-indigo waves-effect subBtn">Добавить расход</button>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="header bg-indigo">
+                    <h2>Мои расходы</h2>
+                </div>
+                <div class="tab-content">
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table id="table_myspending" cellspacing="0" width="100%" class="display">
+                                <thead>
+                                <tr>
+                                    <th>Счет</th>
+                                    <th>Категория</th>
+                                    <th>Дата</th>
+                                    <th>Сумма</th>
+                                    <th>Комментарий</th>
+                                    <th>Удалить расход</th>
+                                </tr>
+                                </thead>
+                                <tfoot>
+                                <tr>
+                                    <th> </th>
+                                    <th> </th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

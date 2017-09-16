@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    {% block title %}{% endblock %}
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link href="/fonts/material-icons.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/adminbsb-materialdesign/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/adminbsb-materialdesign/plugins/node-waves/waves.min.css">
+    <link rel="stylesheet" href="/adminbsb-materialdesign/plugins/animate-css/animate.min.css">
+    <link rel="stylesheet" href="/adminbsb-materialdesign/css/style.min.css">
+    <link rel="stylesheet" href="/adminbsb-materialdesign/css/themes/all-themes.css">
+    <link rel="stylesheet" href="/adminbsb-materialdesign/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css">
+    <link rel="stylesheet" href="/stylesheets/jquery.dataTables.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/adminbsb-materialdesign/plugins/jquery/jquery.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/node-waves/waves.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/momentjs/moment.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <script src="/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/adminbsb-materialdesign/js/admin.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+    <script src="/adminbsb-materialdesign/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+    <script src="/javascripts/accounts.js"></script>
+    <script src="/javascripts/income.js"></script>
+    <script src="/javascripts/journal.js"></script>
+    <script src="/javascripts/other.js"></script>
+    <script src="/javascripts/spending.js"></script>
+    <script src="/javascripts/validation.js"></script>
+</head>
+<body class="theme-indigo">
+<header id="header" class="page-topbar">
+    <div class="navbar">
+        <div class="container-fluid"></div>
+        <div class="navbar-header"><a href="javascript:void(0);" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" class="navbar-toggle collapsed"></a><a href="javascript:void(0);" class="bars"></a><a href="/" class="navbar-brand">Система учета финансов</a></div>
+    </div>
+    <section>
+        <aside id="leftsidebar" class="sidebar">
+            <div class="user-info"></div>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="/"><i class="material-icons col-indigo">credit_card</i><span>Управление счетами </span></a></li>
+                    <li><a href="/income"><i class="material-icons col-indigo">trending_up</i><span>Доход</span></a></li>
+                    <li><a href="/spending"><i class="material-icons col-indigo">trending_down</i><span>Расход</span></a></li>
+                    <li><a href="/journal"><i class="material-icons col-indigo">assignment</i><span>Журнал операций</span></a></li>
+                </ul>
+                <div id="currency_rate"></div>
+            </div>
+        </aside>
+    </section>
+</header>
+<section class="content">
+    <div class="main_content">
+        {% block content %}{% endblock %}
+    </div>
+</section>
+</body>

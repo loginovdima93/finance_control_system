@@ -1,0 +1,72 @@
+{% extends 'layout.twig' %}
+{% block title %}
+    <title>Мои счета | Система учета финансов</title>
+{% endblock %}
+{% block content %}
+    <div class="row clearfix">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="header bg-indigo">
+                    <h2>Создание нового счета</h2>
+                </div>
+                <div class="body">
+                    <form id="form_validation">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input id="name_account" type="text" name="name" required="" class="form-control"/>
+                                <label class="form-label" for="name_account">Название счета</label>
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input id="sum_account" type="number" name="number" required="" class="form-control"/>
+                                <label class="form-label" for="sum_account">Сумма</label>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <input id="rub" type="radio" name="currency" value="RUB" class="with-gap radio-col-indigo"/>
+                            <label for="rub">RUB</label>
+                            <input id="usd" type="radio" name="currency" value="USD" class="with-gap radio-col-indigo"/>
+                            <label for="usd" class="m-l-20">USD</label>
+                            <input id="eur" type="radio" name="currency" value="EUR" class="with-gap radio-col-indigo"/>
+                            <label for="eur" class="m-l-20">EUR</label>
+                        </div>
+                        <button id="new_account" type="submit" class="btn bg-indigo waves-effect subBtn">Создать счет</button>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="header bg-indigo">
+                    <h2>Мои счета</h2>
+                </div>
+                <div class="tab-content">
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table id="table_accounts" cellspacing="0" width="100%" class="display">
+                                <thead>
+                                <tr>
+                                    <th>Название счета</th>
+                                    <th>Сумма</th>
+                                    <th>Валюта</th>
+                                    <th>Удалить счет</th>
+                                </tr>
+                                </thead>
+                                <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
